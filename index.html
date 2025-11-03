@@ -3,227 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TravelBloom - Travel Recommendations</title>
-
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-      height: 100%;
-    }
-
-    /* Navbar */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(0, 119, 182, 0.85);
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 1000;
-      backdrop-filter: blur(5px);
-    }
-
-    nav .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav .search-container {
-      display: flex;
-      gap: 10px;
-    }
-
-    nav input[type="text"] {
-      padding: 6px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    nav button {
-      background-color: #023e8a;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Parallax Sections */
-    .parallax {
-      position: relative;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 80px;
-    }
-
-    /* Backgrounds for each section */
-    #home.parallax {
-      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
-    }
-
-    #about.parallax {
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
-    }
-
-    #contact.parallax {
-      background-image: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1600&q=80');
-    }
-
-    /* Foreground content */
-    .content {
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      padding: 50px;
-      width: 80%;
-      max-width: 800px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(6px);
-    }
-
-    /* Results Section */
-    #results {
-      background: #f8f9fa;
-      padding: 80px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card .info {
-      padding: 15px;
-      text-align: left;
-    }
-
-    /* Contact Form */
-    .contact-form {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    .contact-form button {
-      width: 100%;
-      background-color: #0077b6;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #0077b6;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-    }
-  </style>
+  <title>TravelBloom - Explore Dream Destinations</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">🌍 TravelBloom</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Search (e.g. beach, temple, Japan)" />
-      <button id="searchBtn">Search</button>
-      <button id="clearBtn">Reset</button>
-    </div>
-  </nav>
+  <div id="header"></div> <!-- Reusable header will be injected here -->
 
-  <!-- Home -->
-  <div class="parallax" id="home">
-    <div class="content">
-      <h1>Welcome to TravelBloom</h1>
-      <p>Discover beautiful destinations around the world — beaches, temples, and countries full of culture and wonder.</p>
-    </div>
-  </div>
+  <main id="home" class="fade-in">
+    <section class="hero-text">
+      <h1>EXPLORE DREAM DESTINATIONS</h1>
+      <p>
+        Embark on unforgettable journeys to the most breathtaking places around the world.  
+        From sun-kissed beaches to ancient temples — your next adventure awaits.
+      </p>
+    </section>
 
-  <!-- About -->
-  <div class="parallax" id="about">
-    <div class="content">
-      <h2>About Us</h2>
-      <p>We are a team of travel enthusiasts dedicated to helping you explore the world.</p>
-      <h3>Our Team</h3>
-      <ul style="list-style: none; padding: 0;">
-        <li><b>John Smith</b> — Founder & CEO</li>
-        <li><b>Maria Lopez</b> — Travel Expert</li>
-        <li><b>David Kim</b> — Marketing Head</li>
-      </ul>
-    </div>
-  </div>
+    <section class="results-section fade-in">
+      <h2 class="results-title">Recommended Destinations</h2>
+      <div class="results" id="results"></div>
+    </section>
 
-  <!-- Contact -->
-  <div class="parallax" id="contact">
-    <div class="content">
-      <h2>Contact Us</h2>
-      <form class="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
+    
+  </main>
 
-  <!-- Search Results -->
-  <section id="results"></section>
+  
 
   <footer>
     <p>© 2025 TravelBloom | Explore the world your way 🌴</p>
